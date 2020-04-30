@@ -39,7 +39,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <guava.version>19.0</guava.version>
         <junit.version>5.5.2</junit.version>
-        <redis.version>2.9.0</redis.version>
+        <jedis.version>3.2.0</jedis.version>
         <redis-embedded.version>0.6</redis-embedded.version>
         <findbugs.version>3.0.1</findbugs.version>
         <slf4j.version>1.7.20</slf4j.version>
@@ -73,7 +73,7 @@
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
-            <version>${redis.version}</version>
+            <version>${jedis.version}</version>
             <scope>test</scope>
         </dependency>
         <!-- Used for creating an embedded Redis for testing and comparing behaviour-->

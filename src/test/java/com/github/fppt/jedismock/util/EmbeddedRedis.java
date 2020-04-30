@@ -24,16 +24,15 @@ import redis.embedded.exceptions.EmbeddedRedisException;
 
 /**
  * <p>
- *     Starts Embedded Redis
+ * Starts Embedded Redis
  * </p>
  *
  * <p>
- *     Helper class for starting and working with an embedded redis.
- *     This should be used for testing purposes only
+ * Helper class for starting and working with an embedded redis.
+ * This should be used for testing purposes only
  * </p>
  *
  * @author fppt
- *
  */
 public class EmbeddedRedis {
     public static final int PORT = 7001;
@@ -55,7 +54,7 @@ public class EmbeddedRedis {
      *
      * @param port The port to start redis on
      */
-    private static void start(int port, boolean force){
+    private static void start(int port, boolean force) {
         try {
             LOG.info("Starting redis...");
             redisServer = RedisServer.builder()
@@ -67,6 +66,7 @@ public class EmbeddedRedis {
                 try {
                     redisServer.start();
                 } catch (EmbeddedRedisException e) {
+                    LOG.error("Problem starting embedded redis", e);
                     LOG.warn("Unexpected Redis instance already running on port {}", port);
                 } catch (Exception e) {
                     LOG.warn("Exception while trying to start Redis on port {}. Will attempt to continue.", port, e);
@@ -80,14 +80,14 @@ public class EmbeddedRedis {
         }
     }
 
-    public static void start(){
+    public static void start() {
         start(PORT, false);
     }
 
     /**
      * Stops the embedded redis
      */
-    public static void stop(){
+    public static void stop() {
         try {
             LOG.info("Stopping Redis...");
             redisServer.stop();

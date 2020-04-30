@@ -19,14 +19,18 @@ class RO_hset extends AbstractRedisOperation {
 
     Slice response() {
         Slice key1 = params().get(0);
-        Slice key2 = params().get(1);
-        Slice value = params().get(2);
-        Slice oldValue = hsetValue(key1, key2, value);
 
-        if(oldValue == null){
-            return Response.integer(1);
-        } else {
-            return Response.integer(0);
+        int adds=0;
+        for (int i = 1; i < params().size(); i+=2) {
+            Slice key2 = params().get(i);
+            Slice value = params().get(i+1);
+            Slice oldValue = hsetValue(key1, key2, value);
+
+            if(oldValue==null){
+                adds+=1;
+            }
         }
+
+        return Response.integer(adds);
     }
 }

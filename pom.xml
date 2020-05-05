@@ -9,13 +9,13 @@
         <version>7</version>
     </parent>
 
-    <groupId>com.github.fppt</groupId>
+    <groupId>com.github.mwiede</groupId>
     <artifactId>jedis-mock</artifactId>
-    <version>0.1.17-SNAPSHOT</version>
+    <version>0.3.3-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>jedis-mock</name>
     <description>In memory Redis mock for testing</description>
-    <url>https://github.com/fppt/jedis-mock</url>
+    <url>https://github.com/mwiede/jedis-mock</url>
     <prerequisites>
         <maven>3.0.0</maven>
     </prerequisites>

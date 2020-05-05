@@ -1,5 +1,5 @@
-[![GitHub release](https://img.shields.io/github/release/fppt/jedis-mock.svg)](https://github.com/fppt/jedis-mock/releases/latest)
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.fppt/jedis-mock/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.fppt/jedis-mock)
+[![GitHub release](https://img.shields.io/github/release/mwiede/jedis-mock.svg)](https://github.com/mwiede/jedis-mock/releases/latest)
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.mwiede/jedis-mock/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.mwiede/jedis-mock)
 [![Build Status](https://api.travis-ci.org/mwiede/jedis-mock.svg?branch=master)](https://travis-ci.org/mwiede/jedis-mock)
 
 # Jedis-Mock
@@ -13,7 +13,7 @@ Add it as a dependency in Maven as:
 
 ```xml
 <dependency>
-  <groupId>com.github.fppt</groupId>
+  <groupId>com.github.mwiede</groupId>
   <artifactId>jedis-mock</artifactId>
   <version>0.1.16</version>
 </dependency>
@@ -60,7 +60,7 @@ server.start();
 
 ## Supported Operations
 
-All currently supported operations are listed [here](https://github.com/fppt/jedis-mock/blob/master/src/main/java/com/github/fppt/jedismock/operations/OperationFactory.java)
+All currently supported operations are listed [here](https://github.com/mwiede/jedis-mock/blob/master/src/main/java/com/github/fppt/jedismock/operations/OperationFactory.java)
 
 ## Missing Operations
 

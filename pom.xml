@@ -273,7 +273,7 @@
 
   <scm>
     <connection>scm:git:ssh://git@github.com:mwiede/jedis-mock.git</connection>
-    <developerConnection>scm:git:ssh://git@github.com:mwiede/jedis-mock.git</developerConnection>
+    <developerConnection>scm:git:git@github.com:mwiede/jedis-mock.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
 </project>

@@ -1,4 +1,4 @@
-[![GitHub release](https://img.shields.io/github/release/mwiede/jedis-mock.svg)](https://github.com/mwiede/jedis-mock/releases/latest)
+[![GitHub release](https://img.shields.io/github/v/tag/mwiede/jedis-mock)](https://github.com/mwiede/jedis-mock/releases/latest)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.mwiede/jedis-mock/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.mwiede/jedis-mock)
 [![Build Status](https://api.travis-ci.org/mwiede/jedis-mock.svg?branch=master)](https://travis-ci.org/mwiede/jedis-mock)
 

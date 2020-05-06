@@ -10,7 +10,7 @@
 
     <groupId>com.github.mwiede</groupId>
     <artifactId>jedis-mock</artifactId>
-    <version>0.3.3-SNAPSHOT</version>
+    <version>0.3.3</version>
     <packaging>jar</packaging>
     <name>jedis-mock</name>
     <description>In memory Redis mock for testing</description>
@@ -274,6 +274,6 @@
   <scm>
     <connection>scm:git:ssh://git@github.com:mwiede/jedis-mock.git</connection>
     <developerConnection>scm:git:git@github.com:mwiede/jedis-mock.git</developerConnection>
-    <tag>HEAD</tag>
+    <tag>jedis-mock-0.3.3</tag>
   </scm>
 </project>

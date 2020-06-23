@@ -2,6 +2,8 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.github.mwiede/jedis-mock/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.github.mwiede/jedis-mock)
 [![Build Status](https://api.travis-ci.org/mwiede/jedis-mock.svg?branch=master)](https://travis-ci.org/mwiede/jedis-mock)
 
+:warning: This is a fork of @fppt/jedismock, but still released to maven central.
+
 # Jedis-Mock
 
 Redis Mock is a simple in-memory mock of redis for java testing. 

@@ -1,10 +1,8 @@
 package com.github.fppt.jedismock.comparisontests;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.TestTemplate;
 import org.junit.jupiter.api.extension.ExtendWith;
 import redis.clients.jedis.*;
-import redis.clients.jedis.exceptions.JedisConnectionException;
 import redis.clients.jedis.exceptions.JedisDataException;
 
 import java.util.*;
@@ -137,16 +135,14 @@ public class SimpleOperationsTest {
     }
 
     @TestTemplate
-    @Disabled("jedis reconnects with every command. Exception could be triggered by shutting down server, which contradicts testing setup")
-    public void whenUsingQuit_EnsureTheConnectionIsClosed(Jedis jedis) throws InterruptedException {
+    public void whenUsingQuit_EnsureTheResultIsOK(Jedis jedis) {
         //Create a new connection
         Client client = jedis.getClient();
         Jedis newJedis = new Jedis(client.getHost(), client.getPort());
         newJedis.set("A happy lucky key", "A sad value");
-        assertEquals("OK", newJedis.quit());
 
-        assertThrows(JedisConnectionException.class,
-            ()->newJedis.set("A happy lucky key", "A sad value 2"));
+        assertEquals("OK", newJedis.quit());
+        assertEquals("A sad value", jedis.get("A happy lucky key"));
     }
 
     @TestTemplate

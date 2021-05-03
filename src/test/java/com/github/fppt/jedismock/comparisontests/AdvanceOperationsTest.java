@@ -271,7 +271,6 @@ public class AdvanceOperationsTest {
     }
 
     @TestTemplate
-    @Disabled("I dont know, what is leading to NPE")
     public void whenUsingBlpop_EnsureItTimeout(Jedis jedis) throws ExecutionException, InterruptedException, TimeoutException {
         String list1key = "list1_kdjfnvdsu";
         String list2key = "list2_mbhkdushy";
@@ -286,7 +285,7 @@ public class AdvanceOperationsTest {
         ExecutorService blockingThread = Executors.newSingleThreadExecutor();
         Future future = blockingThread.submit(() -> {
             List<String> result = blockedClient.blpop(1, list1key, list2key, list3key);
-            assertEquals(0, result.size());
+            assertNull(result);
         });
         //Check the list is not modified
         client.setSoTimeout(2000);
